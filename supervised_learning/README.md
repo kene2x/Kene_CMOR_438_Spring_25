@@ -2,7 +2,7 @@
 
 This repository contains a collection of machine learning experiments using two datasets: the **Heart Disease Dataset** and the **Palmer Penguins Dataset**. The project explores classification and regression techniques, model evaluation, and meaningful visualizations.
 
-## 📁 Datasets Used
+##  Datasets Used
 
 ### ❤️ Heart Disease Dataset (`heart.csv`)
 - **Goal**: Predict whether a patient has heart disease.
@@ -10,13 +10,13 @@ This repository contains a collection of machine learning experiments using two 
 - **Features**:
   - Age, Sex, ChestPainType, RestingBP, Cholesterol, FastingBS, RestingECG, MaxHR, ExerciseAngina, Oldpeak, ST_Slope
 
-### 🐧 Penguins Dataset (`penguins.csv`)
+###  Penguins Dataset (`penguins.csv`)
 - **Goal**: Predict penguin species and explore physical feature relationships.
 - **Target Variable**: `species` (Adelie, Chinstrap, Gentoo)
 - **Features**:
   - island, bill_length_mm, bill_depth_mm, flipper_length_mm, body_mass_g, sex
 
-## 🛠️ Machine Learning Algorithms Applied
+##  Machine Learning Algorithms Applied
 
 Most algorithms were applied to the **Heart Disease Dataset**, except where noted:
 
@@ -34,7 +34,7 @@ Most algorithms were applied to the **Heart Disease Dataset**, except where note
 
 Each algorithm is implemented in a separate Jupyter notebook, with clear markdown explanations at each step.
 
-## 📊 Evaluation Metrics
+##  Evaluation Metrics
 
 - **Classification Models**:  
   - Confusion Matrix  
@@ -46,18 +46,32 @@ Each algorithm is implemented in a separate Jupyter notebook, with clear markdow
   - Scatter Plots  
   - Residual Analysis  
 
-## 🧪 Analytical Steps
+## Data Scaling
 
-- Cleaned missing data (especially in the penguins dataset)
-- One-hot encoded categorical variables
-- Normalized or scaled numeric features
-- Verified normality of selected features (e.g., flipper length and body mass)
-- Used PCA for visualization and dimensionality reduction
-- Compared model performance across multiple techniques
+Data scaling is crucial in this project for several reasons:
+1. **Numerical Stability**: Large values can cause overflow in mathematical operations
+2. **Equal Feature Importance**: Ensures all features contribute equally to the model
+3. **Gradient Descent Optimization**: Helps achieve faster convergence
+4. **Algorithm Requirements**: Some algorithms (like neural networks) require normalized inputs
 
-## 💻 Requirements
+We use StandardScaler from scikit-learn to scale our features:
+- Transforms features to have mean=0 and variance=1
+- Applied to both features and target variables in regression tasks
+- Essential for algorithms using distance metrics or gradient descent
+
+We use MinMaxScaler from scikit-learn to Normalize some features
+
+## Reproducing Results
+
+1. Ensure all dependencies are installed
+3. Run the respective notebook for each algorithm
+4. Each notebook contains detailed comments and visualization of results
+
+##  Requirements
 
 Install dependencies with:
 
 ```bash
 pip install numpy pandas matplotlib seaborn scikit-learn
+
+
