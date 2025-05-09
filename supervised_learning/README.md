@@ -4,7 +4,7 @@ This repository contains a collection of machine learning experiments using two 
 
 ##  Datasets Used
 
-### ❤️ Heart Disease Dataset (`heart.csv`)
+### Heart Disease Dataset (`heart.csv`)
 - **Goal**: Predict whether a patient has heart disease.
 - **Target Variable**: `HeartDisease` (1 = Disease, 0 = No Disease)
 - **Features**:
